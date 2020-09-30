@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo{
+  background: #f0f0f0;
+  padding: 35px;
+  height: 100vh;
+}
+
+.todo__field::after{
+  background: #000;
+  content: '';
+  height: 10px;
+}
+
+.todo__tasks{
+  margin-top: 16px;
+}
+
+.tasks__lists{
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+}

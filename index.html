@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo list</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+  <div class="container">
+    <section class="todo">
+      <fieldset todo__field>
+        <label 
+          for="add_item" 
+          class="field__label">
+          Item:
+        </label>
+        <input 
+        id="add_item"
+        type="text" 
+        v-model='field'>
+        <button
+         @click= "addItem">
+          adicionar item
+        </button>
+      </fieldset>
+
+      <fieldset class="todo__tasks">
+        <ul>
+          <li
+            class="tasks__lists"
+            v-for="items in item">
+            {{items}}
+            <button
+          @click="removeItem">
+          excluir
+        </button>
+          </li>
+        </ul>
+      </fieldset>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
