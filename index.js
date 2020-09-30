@@ -11,6 +11,8 @@ var todo = new Vue({
       if(!this.field) return 
       
       this.item.unshift(this.field)
+
+      this.field= '';
     },
 
     removeItem: function(){
